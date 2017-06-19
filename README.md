@@ -1,9 +1,9 @@
 # JacWin10
-JacWin10 XFCE Theme
-Just a Copy Windows10
-Created by Luiz F. Nunes
+JacWin10 XFCE Theme<br/>
+Just a Copy Windows10<br/>
+Created by Luiz F. Nunes<br/>
 
-Theme XFWM4 to Window Manager and GTK2 Theme for XFCE
+Theme XFWM4 to Window Manager and GTK2 Theme for XFCE<br/>
 
 To install unzip the folder to directory of themes of system:
 
