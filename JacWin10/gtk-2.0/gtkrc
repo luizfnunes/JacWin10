@@ -1322,6 +1322,14 @@ style "xfce-panel-button"
 		image
 		{
 			function = BOX
+			state = NORMAL
+			border = {0,0,0,0}
+			file = "assets/others/invisible.png"
+			stretch = TRUE
+		}
+		image
+		{
+			function = BOX
 			state = PRELIGHT
 			border = {0,0,0,0}
 			file = "assets/xfce-panel/button_selected.png"
