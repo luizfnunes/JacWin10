@@ -1,6 +1,6 @@
 
 gtk-color-scheme = "base_color:#FFFFFF\nbg_color:#FFFFFF\ntext_color:#000000\nfg_color:#F0F0F0\ndesactived_color:#6B6B6B"
-gtk-color-scheme = "selected_bg_color:#3399FF\nseparator_color:#d7d7d7\ntoolbar_separator:#8c8c8c"
+gtk-color-scheme = "selected_bg_color:#3399FF\nseparator_color:#d7d7d7"
 gtk-color-scheme = "menu_bg_frame:#a0a0a0\nmenu_bg_selected:#CCE8FF"
 
 
@@ -25,6 +25,10 @@ style "default"
 
 	GtkScrolledWindow::scrollbars-within-bevel = 1
 	GtkCheckButton::indicator_spacing = 3
+	
+	GtkMenuBar::shadow_type = GTK_SHADOW_NONE
+	GtkToolbar::shadow_type = GTK_SHADOW_NONE
+	GtkPaned::shadow_type = GTK_SHADOW_NONE
 
 	fg[NORMAL]        = @text_color
 	fg[PRELIGHT]      = @text_color
@@ -375,24 +379,6 @@ style "separator-menu-item"
 	}
 }
 
-style "separator-toolbar"
-{
-	xthickness = 1
-	ythickness = 2
-	GtkWidget::wide-separators = TRUE
-	fg[NORMAL]        = @toolbar_separator
-	bg[NORMAL]        = @toolbar_separator
-	engine "pixmap"
-	{	
-		image
-		{
-			function = VLINE
-			file = "assets/menu/menu_separator.png"
-			border={0,0,0,0}
-			stretch = TRUE
-		}
-	}
-}
 
 style "button-toolbar"
 {
@@ -440,7 +426,7 @@ style "toolbar"
 
 style "scrollbar"
 {
-	GtkRange::slider-width = 16
+	GtkRange::slider-width = 14
 	engine "pixmap" 
 	{
 		image 
@@ -931,6 +917,11 @@ style "entry"
 {
 	xthickness	= 4
 	ythickness   	= 4
+		
+	bg[SELECTED]		= @selected_bg_color
+	base[INSENSITIVE]	= @bg_color
+	fg[SELECTED]		= @text_color
+
 	engine "pixmap"
 	{
 		image
@@ -1483,6 +1474,34 @@ style "wiskermenu-scrollbar"
 	}
 }
 
+# Chromium
+style "chrome-gtk-frame"
+{
+	ChromeGtkFrame::frame-color = @bg_color
+	ChromeGtkFrame::inactive-frame-color = @bg_color
+
+	ChromeGtkFrame::frame-gradient-size = 16
+	ChromeGtkFrame::frame-gradient-color = shade(1.07, @bg_color)
+
+	#ChromeGtkFrame::incognito-frame-color = shade(0.85, @bg_color)
+	#ChromeGtkFrame::incognito-inactive-frame-color = @bg_color
+
+	#ChromeGtkFrame::incognito-frame-gradient-color = @bg_color
+
+	ChromeGtkFrame::scrollbar-trough-color = shade(0.912, @bg_color)
+	ChromeGtkFrame::scrollbar-slider-prelight-color = shade(1.04, @bg_color)
+	ChromeGtkFrame::scrollbar-slider-normal-color = @bg_color
+}
+
+style "chrome_menu_item"
+{
+        bg[SELECTED] = @selected_bg_color
+}
+
+style "office"
+{
+	engine "murrine" { }
+}
 
 class "GtkWidget"    style "default"
 class "GtkButton" style "button"
@@ -1518,6 +1537,13 @@ widget "whiskermenu-window*Entry*" style "wiskermenu-entry"
 widget "whiskermenu-window*Scrollbar*" style "wiskermenu-scrollbar"
 widget "*Xfce*Panel*" style "xfce-panel-button"
 
+#Chrome
+class "ChromeGtkFrame" 			             style "chrome-gtk-frame"
+widget_class "*Chrom*Button*"		             style "button"
+widget_class "*<GtkCustomMenu>*<GtkCustomMenuItem>*" style "chrome_menu_item"
+
+#Office
+widget "*openoffice*" class "office"
 
 style "font"
 {
