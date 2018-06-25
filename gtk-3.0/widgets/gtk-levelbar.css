@@ -1,0 +1,21 @@
+levelbar trough, .level-bar .trough{
+    background-color: @progressbar_border;
+    padding: 1px;
+    margin: 1px;
+}
+levelbar block.empty, .level-bar block.empty{
+    padding: 5px;
+    background-color: @base_color;
+}
+levelbar block:not(.empty), .level-bar block:not(.empty) {
+    border-color: @progressbar_border;
+    background-color: @progressbar_full;
+}
+
+levelbar.horizontal.discrete block, .levelbar.horizontal.discrete block {
+    margin: 1px;
+}
+  
+levelbar.vertical.discrete block, .levelbar.vertical.discrete block {  
+    margin: 1px; 
+}

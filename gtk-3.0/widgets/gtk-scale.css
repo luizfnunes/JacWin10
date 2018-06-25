@@ -1,0 +1,38 @@
+scale {
+  
+  min-height: 28px;
+  min-width: 15px;
+}
+scale slider {
+  min-height: 12px;
+  min-width: 12px;
+  background-color: transparent;  
+}  
+
+scale.horizontal trough {  
+  padding: 1px; 
+} 
+
+scale.horizontal slider {  
+  min-height: 19px;
+  margin: -7px -5px -8px -5px;
+  background-image: -gtk-scaled(url("../assets/scale/slider_h.png"));
+} 
+
+
+scale.vertical trough {  
+  padding: 1px; 
+}
+
+scale.vertical slider {  
+  min-width: 19px;
+  margin: -5px -8px -5px -6px;
+  background-image: -gtk-scaled(url("../assets/scale/slider_v.png"));
+} 
+
+
+
+scale trough {    
+  background-color: @progressbar_back;
+  border: 1px solid @progressbar_border;
+}

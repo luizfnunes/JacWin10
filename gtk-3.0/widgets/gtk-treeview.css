@@ -1,0 +1,20 @@
+treeview, .view, GtkTreeView{
+    background-color: @base_color;
+}
+
+treeview button, .view button, GtkTreeView GtkButton{
+    background: @base_color;
+    color: @text_color;
+    margin: 0;
+    border: none;
+    border-right: 1px solid @button_border;
+}
+
+treeview button:last-child{
+    border: none;
+}
+
+treeview.view:selected{
+    background-color: @selected_bg_color;
+    color: @text_selected_color;
+}

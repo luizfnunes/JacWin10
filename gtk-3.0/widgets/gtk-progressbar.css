@@ -1,0 +1,12 @@
+progressbar, .progressbar, GtkProgressBar{
+    background-color: @progressbar_back;
+    border: 1px solid @progressbar_border;
+    padding: 1px;
+    margin: 2px;
+}
+progressbar through{
+    background-color: @base_color;
+}
+progressbar progress{
+    background-color: @progressbar_full;
+}

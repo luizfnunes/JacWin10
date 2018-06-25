@@ -1,0 +1,61 @@
+scrollbar slider,
+GtkScrollbar .slider{
+	background-color: @slider_normal;
+}
+
+GtkScrollbar slider:hover,
+scrollbar slider:hover{
+	background-color: @slider_hover;
+}
+
+GtkScrollbar slider.horizontal,
+GtkScrollbar slider.vertical,
+scrollbar slider.horizontal,
+scrollbar slider.vertical{
+	background-image:none;
+}
+
+GtkScrollbar button.left,
+scrollbar button.left{
+	-gtk-icon-source: none;
+	background-image: url('assets/scrollbar/scrollbar_arrow_left.png')
+}
+
+GtkScrollbar button.left:hover,
+scrollbar button.left:hover{
+	-gtk-icon-source: none;
+    background-image: url('assets/scrollbar/scrollbar_arrow_left_prelight.png');
+}
+
+GtkScrollbar button.right,
+scrollbar button.right{
+	-gtk-icon-source: none;
+    background-image: url('../assets/scrollbar/scrollbar_arrow_right.png');
+    
+}
+GtkScrollbar button.right:hover,
+scrollbar button.right:hover{
+	-gtk-icon-source: none;
+	background-image: -gtk-scaled(url('../assets/scrollbar/scrollbar_arrow_right_prelight.png'));
+}
+
+GtkScrollbar button.top,
+scrollbar button.top{
+	-gtk-icon-source: none;
+	background-image: url('../assets/scrollbar/scrollbar_arrow_up.png');
+}
+GtkScrollbar button.top:hover,
+scrollbar button.top:hover{
+	-gtk-icon-source: none;
+	background-image: url('../assets/scrollbar/scrollbar_arrow_up_prelight.png')
+}
+GtkScrollbar button.bottom,
+scrollbar button.bottom{
+	-gtk-icon-source: none;
+	background-image: url('../assets/scrollbar/scrollbar_arrow_down.png');
+}
+GtkScrollbar button.bottom:hover,
+scrollbar button.bottom:hover{
+	-gtk-icon-source: none;
+	background-image: url('../assets/scrollbar/scrollbar_arrow_down_prelight.png')
+}

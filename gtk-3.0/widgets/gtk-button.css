@@ -1,0 +1,49 @@
+button, .button, GtkButton{
+    padding: 7px;
+    background-color: @button_back;
+    border: 1px solid @button_border;
+    margin: 1px;
+}
+button:hover, .button:hover,
+button:selected, .button:selected,
+button:checked, .button:checked{
+    background-color: @button_selected_back;
+    border: 1px solid @button_selected_border;
+}
+button:insensitive, .button:insensitive{
+    background-color: @button_inative_back;
+    border: 1px solid @button_inative_border;
+}
+
+button.link, GtkLinkButton{
+    padding:2px;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+button.link label, .button.link .label{
+    color: @button_selected_border;
+    text-decoration: underline;
+}
+button.link:hover, .button.link:hover{
+    color: @selected_bg_color;
+}
+
+/* Switch Button */
+switch, .switch, GtkSwitch{
+    margin: 4px 0;
+    padding: 2px;
+	border: 1px solid @button_border;
+	border-radius: 20px; 
+}
+
+switch slider, .switch slider, GtkSwitch .slider{
+    background-color: @button_back;
+    border: 1px solid @toolbar_button_border;
+    border-radius: 20px;
+}
+
+switch slider:active, .switch slider:active, GtkSwitch slider:active,
+switch:checked slider, .switch:checked slider, GtkSwitch:checked slider{
+	background-color: @selected_bg_color;
+	border: 1px solid @toolbar_button_border;
+}

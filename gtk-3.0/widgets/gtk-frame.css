@@ -1,0 +1,6 @@
+frame GtkFrame{
+    padding: 10px;
+}
+frame border, GtkFrame border{
+    border: 1px solid @separator_color;
+}

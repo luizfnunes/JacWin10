@@ -1,0 +1,65 @@
+
+* {
+	engine: none;
+	color: @text_color;
+	border-width: 1px;
+	font-family: Sans;
+	outline-color: @button_focus_border;
+	outline-style: dashed;
+    	outline-offset: 2px;
+	-GtkWidget-wide-separators: TRUE;
+	-GtkWidget-separator-height: 1;
+	-GtkWidget-separator-width: 1;
+	-GtkMenuBar-internal-padding: 5px;	
+	-GtkTreeView-allow-rules: TRUE;
+	-GtkEntry-inner-border: {5,5,5,5};
+	-GtkComboBox-arrow-size: 5;
+	-GtkProgressBar-min-vertical-bar-width: 20;
+	-GtkProgressBar-min-horizontal-bar-height: 20;
+	-GtkProgressBar-xspacing: 1;
+	-GtkProgressBar-yspacing: 1;
+	-GtkScale-slider-length: 10;	
+	-GtkScrollbar-has-backward-stepper: 2;
+	-GtkScrollbar-has-forward-stepper: 2;
+	-GtkScrolledWindow-scrollbar-spacing: 0;
+    	-GtkScrolledWindow-scrollbars-within-bevel: 0;
+    	-GtkNotebook-tab-overlap: 0;
+	background-clip: padding-box;
+    	outline-color: @fg_color;
+    	outline-style: dashed;
+        outline-offset: 2px;
+}
+
+*:selected,
+*:selected:focus {
+    background-color: @selected_bg_color;
+    color: @base_color;
+}
+*:insensitive,
+*:insensitive:insensitive {
+    color: @desactived_color;
+}
+
+*:insensitive {
+    -gtk-image-effect: dim;
+}
+*:insensitive:focus{
+	background-color: @selected_bg_color;
+}
+*:hover {
+    -gtk-image-effect: highlight;
+}
+
+*:link,
+*:visited {
+    color: @selected_bg_color;
+}
+decoration{
+	box-shadow: 0  1px 4px 1px rgba(0, 0, 0, 0.4);
+}
+.background{
+	background-color: @bg_color;
+}
+separator, .separator{
+	background-color: @separator_color;
+}

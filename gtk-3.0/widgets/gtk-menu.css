@@ -1,0 +1,60 @@
+menubar, .menubar, GtkMenuBar{
+    background-color: @base_color;
+}
+menu, .menu, GtkMenu{
+    padding: 4px;
+    background-color: @bg_color;
+    border: 1px solid @separator_color;
+}
+
+menu separator, .menu .separator, GtkMenu GtkSeparatorMenuItem{
+    border-bottom: 1px solid @separator_color;
+    background-color: transparent;
+    margin: 5px 0;
+    height: 1px;
+    padding: 1px;
+}
+
+menuitem, .menuitem, GtkMenuItem{
+    padding: 2px;
+    min-width: 16px;
+    min-height: 16px;
+    border: 1px solid transparent;
+}
+menuitem:hover, .menuitem:hover, GtkMenuItem:hover{
+    background-color: @selected_bg_color;
+    color: @text_selected_color;
+}
+menuitem:hover > label, .menuitem:hover > .label{
+    color: @text_selected_color;
+}
+menubar > menuitem, .menubar > .menuitem{
+    padding: 7px 10px;
+}
+menubar > menuitem:hover, .menubar > .menuitem:hover{
+    background-color: @selected_menu_back;
+    border: 1px solid @selected_menu_border;
+}
+menubar > menuitem:hover > label, .menubar > .menuitem:hover > .label{
+    color: @text_color;
+}
+.menu menuitem arrow,
+menu menuitem arrow{
+    min-height: 16px;
+    min-width: 16px; 
+}
+menuitem check{
+    min-height: 16px;
+    min-width: 16px; 
+}
+  
+menuitem radio {
+    min-height: 16px;
+    min-width: 16px; 
+}
+
+.menu > arrow,
+menu > arrow{
+    min-width: 16px;
+    min-height: 16px;
+}

@@ -1,0 +1,13 @@
+toolbar, .toolbar, GtkToolBar{
+    background-color: @base_color;
+    padding-bottom: 4px;
+}
+toolbar button, .toolbar .button,
+toolbar button:insensitive, .toolbar .button:insensitive{
+    background-color: transparent;
+    border-color: transparent;
+}
+toolbar separator, .toolbar .separator{
+    min-width: 1px;
+    background-color: @separator_color;
+}
