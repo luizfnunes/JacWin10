@@ -35,15 +35,61 @@ switch, .switch, GtkSwitch{
 	border: 1px solid @button_border;
 	border-radius: 20px; 
 }
-
 switch slider, .switch slider, GtkSwitch .slider{
     background-color: @button_back;
     border: 1px solid @toolbar_button_border;
     border-radius: 20px;
 }
-
 switch slider:active, .switch slider:active, GtkSwitch slider:active,
 switch:checked slider, .switch:checked slider, GtkSwitch:checked slider{
 	background-color: @selected_bg_color;
 	border: 1px solid @toolbar_button_border;
+}
+
+/* Check Button*/
+checkbutton, GtkCheckButton{
+    padding: 2px 5px;
+}
+check, .check{
+    margin-right: 4px;
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox/checkbox_normal.png"));
+}
+check:hover, .check:hover{
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox/checkbox_selected.png"));
+}
+check:disabled, .check:disabled{
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox/checkbox_disabled.png"));
+}
+check:checked, .check:checked{
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox/checkbox_normal_checked.png"));
+}
+check:hover:checked, .check:hover:checked{
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox/checkbox_selected_checked.png"));
+}
+check:disabled:checked, .check:disabled:checked{
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox/checkbox_disabled_checked.png"));
+}
+
+/* Radio Button */
+radiobutton, .radiobutton, GtkRadioButton{
+    padding: 2px 5px;
+}
+radio, .radio{
+    margin-right: 4px;
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox/radio_normal.svg"));
+}
+radio:hover, .radio:hover{
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox/radio_selected.svg"));
+}
+radio:disabled, .radio:disabled{
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox/radio_disabled.svg"));
+}
+radio:checked, .radio:checked{
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox/radio_normal_checked.svg"));
+}
+radio:hover:checked, .radio:hover:checked{
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox/radio_selected_checked.svg"));
+}
+radio:disabled:checked, .radio:disabled:checked{
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox/radio_disabled_checked.svg"));
 }
