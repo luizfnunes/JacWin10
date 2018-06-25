@@ -16,9 +16,17 @@ scale.horizontal trough {
 scale.horizontal slider {  
   min-height: 19px;
   margin: -7px -5px -8px -5px;
-  background-image: -gtk-scaled(url("../assets/scale/slider_h.png"));
+  background-image:  -gtk-scaled(url("../assets/scale/slider_h.svg"));
+  background-size: 100% 100%;
 } 
-
+scale.horizontal slider:active {  
+  background-image: -gtk-scaled(url("../assets/scale/slider_h_click.svg"));
+  background-size: 100% 100%;
+} 
+scale.horizontal slider:backdrop {  
+  background-image: -gtk-scaled(url("../assets/scale/slider_h_slide.svg"));
+  background-size: 100% 100%;
+} 
 
 scale.vertical trough {  
   padding: 1px; 
@@ -28,7 +36,10 @@ scale.vertical slider {
   min-width: 19px;
   margin: -5px -8px -5px -6px;
   background-image: -gtk-scaled(url("../assets/scale/slider_v.png"));
-} 
+}
+scale.vertical slider:active {  
+  background-image: -gtk-scaled(url("../assets/scale/slider_v_click.png"));
+}  
 
 
 
