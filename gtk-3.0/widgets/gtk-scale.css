@@ -35,11 +35,17 @@ scale.vertical trough {
 scale.vertical slider {  
   min-width: 19px;
   margin: -5px -8px -5px -6px;
-  background-image: -gtk-scaled(url("../assets/scale/slider_v.png"));
+  background-image: -gtk-scaled(url("../assets/scale/slider_v.svg"));
+  background-size: 100% 100%;
 }
 scale.vertical slider:active {  
-  background-image: -gtk-scaled(url("../assets/scale/slider_v_click.png"));
+  background-image: -gtk-scaled(url("../assets/scale/slider_v_click.svg"));
+  background-size: 100% 100%;
 }  
+scale.vertical slider:backdrop {  
+  background-image: -gtk-scaled(url("../assets/scale/slider_v_slide.svg"));
+  background-size: 100% 100%;
+} 
 
 
 
