@@ -11,7 +11,7 @@
 @import url("widgets/gtk-treeview.css");
 @import url("widgets/gtk-scrollbar.css");
 @import url("widgets/gtk-frame.css");
-
+@import url("widgets/gtk-notebook.css");
 
 @import url("widgets/gtk-popover.css");
 @import url("widgets/gtk-spinner.css");
